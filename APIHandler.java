@@ -20,7 +20,7 @@ class APIHandler {
 
 
     // private URL url = new URL("https://api.edamam.com/search?q=chicken&app_id=b957081d&app_key=889e79d32df59ed1621b6247b075e26a&from=0&to=3&calories=591-722&health=alcohol-free");
-    public void testAPICall() {
+    public Query getMealsFromQuery() {
 
         String test = "https://api.edamam.com/search?q=chicken&app_id=b957081d&app_key=889e79d32df59ed1621b6247b075e26a&from=0&to=3&calories=591-722&health=alcohol-free";
 
@@ -62,22 +62,28 @@ class APIHandler {
         String resultsKeyword = "hits";
         JsonArray searchResults = json.getJsonArray(resultsKeyword);
 
-        // Temporary proof of concept. Iterate through in actual version
-        JsonObject recipe = searchResults.getJsonObject(0).getJsonObject("recipe");
+        Query query = new Query(searchResults)
+        return query;
 
-        // Get ingredients. Proof of concept so only getting ingredients of first recipe
-        JsonArray ingredients = recipe.getJsonArray("ingredients");
-
-        if (ingredients == null) {
-            System.out.println("NULLY NULL NULL");
-        }
-        // Get first ingredient from first meal ingredients list. Proof of concept so only doing one ingredient
-        JsonObject ingredient = ingredients.getJsonObject(0);
-
-        System.out.println(ingredient.getString("text"));
-
-        System.out.println("YAY IT WORKED");
     }
+
+
+
+
+    // Temporary proof of concept. Iterate through in actual version
+//
+//    // Get ingredients. Proof of concept so only getting ingredients of first recipe
+//    JsonArray ingredients = recipe.getJsonArray("ingredients");
+//
+//    if (ingredients == null) {
+//        System.out.println("NULLY NULL NULL");
+//    }
+//    // Get first ingredient from first meal ingredients list. Proof of concept so only doing one ingredient
+//    JsonObject ingredient = ingredients.getJsonObject(0);
+//
+//    System.out.println(ingredient.getString("text"));
+//
+//    System.out.println("YAY IT WORKED");
 
 
 }
