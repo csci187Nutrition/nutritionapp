@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+     >
+        <TableRow
+            android:layout_weight="0.8">
+            <ImageButton
+                android:id="@+id/listItemPic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_weight="0.2">
+            <TextView
+                android:id="@+id/listItemDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DATE"/>
+            <TextView
+                android:id="@+id/listItemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NAME"/>
+        </TableRow>
+    </TableLayout>
+</android.support.constraint.ConstraintLayout>
