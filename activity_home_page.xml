@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="10dp">
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -16,7 +17,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Total Calories Today: "/>
+                android:text="Today's Calories: "/>
             <TextView
                 android:id="@+id/todaysCalories"
                 android:layout_width="wrap_content"
@@ -31,11 +32,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="grams C: 25 "/>
+                android:text="Macros (g): C: 25 "/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="P: 55"/>
+                android:text="P: 55 "/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -53,18 +54,26 @@
         android:layout_height="wrap_content"
         android:text="Upcoming Meals"/>
 
-    <view class="android.support.v7.app.AlertController$RecycleListView"
-        android:layout_width="fill_parent"
-        android:layout_height="200dp">
-    </view>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvUpcoming"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        android:layout_margin="3dp"/>
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="History"/>
 
-    <view class="android.support.v7.app.AlertController$RecycleListView"
-        android:layout_width="fill_parent"
-        android:layout_height="200dp">
-    </view>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvHistory"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        android:layout_margin="3dp"/>
+
 </LinearLayout>
