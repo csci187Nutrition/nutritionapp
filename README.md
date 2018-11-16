@@ -1,5 +1,5 @@
 # nutritionapp
-NOTE: Our codebase has migrated to the csci/187Nutrition/MealPlanner repository to accommodate the android app file directories. 
+NOTE: Our codebase has migrated to the csci187Nutrition/MealPlanner repository to accommodate the android app file directories. 
 
 https://github.com/csci187Nutrition/MealPlanner
 
